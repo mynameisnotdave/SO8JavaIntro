@@ -17,6 +17,7 @@ public class ExampleLoop {
                     }
                 }
                 default -> System.out.println("What did you say about me?"); // FIXME: Print this only once
+
             }
         }
     }
