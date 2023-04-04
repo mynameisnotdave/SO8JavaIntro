@@ -7,10 +7,10 @@ public class SumOfNumbers {
         System.out.println("Input a number to sum to: ");
         int sumTo = reader.nextInt();
         int i = 0;
-        while (sumTo > i) {
-            i += sumTotal;
-            System.out.println(sumTotal);
-            i--;
+        while (i <= sumTo) {
+            sumTotal += i;
+            i++;
         }
+        System.out.println(sumTotal);
     }
 }
