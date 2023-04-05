@@ -11,6 +11,6 @@ public class SumOfNumbers {
             sumTotal += i;
             i++;
         }
-        System.out.println(sumTotal);
+        System.out.println("Sum total is " + sumTotal);
     }
 }

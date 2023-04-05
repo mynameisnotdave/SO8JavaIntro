@@ -1,37 +1,27 @@
-public class Demo
-{
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
+class Demo {
+    public static void main(String[ ] args) {
+        Name name = new Name();
+        name.setPriority(1);
+
+        Welcome welcome = new Welcome();
+        welcome.setPriority(6);
+
+        welcome.start();
+        name.start();
+
     }
-
-    @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
-
-    public static void main(String[] args) {
-
-        Purchase customer = new Purchase();
-
-        Purchase specialCustomer = new Purchase(){
-            //your code goes here
-            @Override public int totalAmount(int price) {
-                return price - (price*20)/100;
-            }
-        };
-        System.out.println(customer.totalAmount(1000));
-        System.out.println(specialCustomer.totalAmount(100000));
-    }
-
-
 }
 
 
-class Purchase {
-    int price;
+class Welcome extends Thread{
+    public void run() {
+        System.out.println("Welcome!");
+    }
+}
 
-    public int totalAmount(int price) {
-        return price - (price*10)/100;
+
+class Name extends Thread{
+    public void run() {
+        System.out.println("Please enter your name");
     }
 }

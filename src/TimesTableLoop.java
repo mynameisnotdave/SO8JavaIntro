@@ -6,7 +6,7 @@ public class TimesTableLoop {
         System.out.println("What times table would you like? : ");
 
         int timesTable = reader.nextInt();
-        for(int i = 1; i<12; i++) {
+        for(int i = 1; i<=12; i++) {
             System.out.println(timesTable * i);
         }
     }
