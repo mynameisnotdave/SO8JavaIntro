@@ -1,17 +1,19 @@
 public class Main {
-    public static void main(String[] args) {
-        int j = 0;
-        int i;
-        int k = 0;
-        for (i = 1; i <= 4; i++) {
+    public static void main(String[] args) {RomanToInt("XIV");}
 
-            for (j = 1; j <= 4; j++) {
-                for (k = 1; k <= 4; k++) {
-                    // Statements to eliminate duplicates
-                    System.out.println(i + " " + j + " " + k);
-                }
-            }
+    public static void RomanToInt(String s) {
+        // get string, find out what it contains, match keys to vals, turn string into int based on vals
+        /*
+                I             1
+                V             5
+                X             10
+                L             50
+                C             100
+                D             500
+                M             1000
+         */
+        for(int i=0; i<s.length(); i++) {
+            System.out.println(s.charAt(i));
         }
-        System.out.println(i + j + k);
     }
 }
