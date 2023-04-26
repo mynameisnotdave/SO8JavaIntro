@@ -1,19 +1,20 @@
-public class Main {
-    public static void main(String[] args) {RomanToInt("XIV");}
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
 
-    public static void RomanToInt(String s) {
-        // get string, find out what it contains, match keys to vals, turn string into int based on vals
-        /*
-                I             1
-                V             5
-                X             10
-                L             50
-                C             100
-                D             500
-                M             1000
-         */
-        for(int i=0; i<s.length(); i++) {
-            System.out.println(s.charAt(i));
+import java.util.Arrays;
+
+class Solution {
+    public static void main(String[] args) {
+        int[] nums;
+        runningSum(nums= new int[]{3, 2, 7, 14, 5});
+    }
+    @Contract("_ -> param1")
+    public static int @NotNull [] runningSum(int[] nums) {
+        int sum = nums[0];
+        for(int i=1; i< nums.length; i++) {
+            nums[i] = nums[i] + nums[i-1]; // nums[0]+nums[1]
         }
+        System.out.println(Arrays.toString(nums));
+        return nums;
     }
 }
